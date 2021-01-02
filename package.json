@@ -1,0 +1,32 @@
+{
+  "name": "four-card-feature-section-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Four card feature section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass main.scss style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" style.comp.css -o style.prefix.css",
+    "compress:css": "node-sass style.prefix.css style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzheng0214/Four-card-feature-section.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/gzheng0214/Four-card-feature-section/issues"
+  },
+  "homepage": "https://github.com/gzheng0214/Four-card-feature-section#readme"
+}
